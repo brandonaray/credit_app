@@ -12,4 +12,9 @@ class Api::AccountsController < ApplicationController
     end
   end
 
+  def show
+    @account = Account.find_by(id: params[:id])
+    render "show.json.jbuilder"
+  end
+
 end
