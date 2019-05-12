@@ -7,7 +7,7 @@ class Api::TransactionsController < ApplicationController
 
   def create
     @transaction = Transaction.new(
-      type: params[:type],
+      transaction_type: params[:type],
       amount: params[:amount],
       account_id: params[:account_id]
     )
